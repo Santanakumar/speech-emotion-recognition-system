@@ -9,3 +9,6 @@ To address these limitations, the proposed system integrates "Speech Emotion Rec
 A key strength of the system is its ability to process "multi-speaker audio", associate detected emotions with specific speakers, and provide real-time visual feedback through a "Flask-based web interface". Emotions such as happiness, sadness, anger, and neutrality are identified along with confidence scores, while XAI components enhance transparency by presenting emotional trends and speaker timelines.
 
 Through optimized preprocessing, parallelized execution, and GPU acceleration, the system demonstrates strong real-time performance, scalability, and adaptability across languages and domains. The project serves as both a functional prototype and a research contribution, offering a comprehensive approach toward building emotionally intelligent AI systems for applications such as mental health monitoring, virtual education, and AI- driven customer support.
+
+## Introduction
+### Background
