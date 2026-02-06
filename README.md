@@ -40,3 +40,23 @@ Despite significant progress in Speech Emotion Recognition (SER) and sentiment a
 
 - **Limited Context Awareness:** Most SER models analyze utterances in isolation, failing to capture emotional flow across conversational turns.
   *Solution:* Transformer-based models (RoBERTa, DistilBERT) are integrated with diarized speech to preserve dialogue continuity.
+
+- **Dependence on Handcrafted Features:** Traditional approaches rely heavily on MFCCs and spectrograms, which are sensitive to noise, accents, and tuning bias.
+  *Solution:* End-to-end deep learning representations (e.g., HuBERT) reduce feature engineering dependency and improve generalization.
+
+- **Real-time Processing Latency:** Deep learning SER pipelines often suffer from high computational cost, limiting live deployment.
+  *Solution:* Optimized parallel execution enables simultaneous transcription, diarization, and emotion interference for low-latency performance.
+
+- **Lack of Multimodal Emotion Fusion:** Many systems process only speech or text independently, missing complementary emotional cues.
+  *Solution:* This framework combines prosodic speech signals with semantic text understanding for richer emotion classification.
+
+- **Language and Accent Variability:** Existing SER models underperform across multilingual and diverse accent scenarios due to dataset bias.
+  *Solution:* Whisper's multilingual transcription and HuBERT's robust speech embeddings enhance cross-lingual adaptability.
+
+- **Emotion Ambiguity and Overlap:** Emotions such as anger, frustration, or excitement often overlap, making classification difficult.
+  *Solution:* Joint speech-text modeling improves disambiguation of subtle emotional expressions.
+
+- **Lack of Explainability:** Most SER systems provide predictions without transparency, reducing trust in sensitive applications.
+  *Solution:* Explainable AI (XAI) modules visualize confidence scores, emotion trends, and speaker timelines for interpretability.
+
+By addressing these gaps, the project delivers a scalable, context-aware, multilingual, and explainable SER framework suitable for real-world human-centric AI applications.
