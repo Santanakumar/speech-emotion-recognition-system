@@ -90,9 +90,42 @@ By achieving these objectives, the project delivers a scalable, context-aware, a
 The project was executed in a structured multi-phase workflow to ensure scalability, accuracy, and real-time performance.
 
 ### Phase 1: Research & Requirement Analysis
-- Reviewed existing work in Speech Emotion Recognition (SER), speaker diarization, and sentiment analysis.
-- Identified key challenges such as real-time latency, lack of interpretability, and speaker-level emotion attribution.
-- Defined functional and non-functional requirements.
-- Finalized tools: Python, Whisper, PyAnnote, Transformers and Flask.
+- Reviewed existing work in Speech Emotion Recognition (SER), speaker diarization, and sentiment analysis
+- Identified key challenges such as real-time latency, lack of interpretability, and speaker-level emotion attribution
+- Defined functional and non-functional requirements
+- Finalized tools: Python, Whisper, PyAnnote, Transformers and Flask
 
 ### Phase 2: Data Collection & Preprocessing
+- Collected labeled emotional speech datasets for training and evaluation
+- Standardized audio into **16kHz mono WAV format**
+- Generated speech-to-text transcripts using Whisper
+- Performed consistency and quality checks for reliable model performance
+
+### Phase 3: Model Selection & Implementation
+- Integrated core modules:
+  - Whisper for transcription
+  - PyAnnote for speaker diarization
+  - RoBERTa / DistilBERT for emotion classification
+- Developed a unified pipeline for multi-speaker emotion analysis
+
+### Phase 4: Training & Optimization
+- Fine-tuned transformer-based emotion classifiers on the dataset
+- Optimized hyperparameters to improve accuracy and reduce processing latency
+- Evaluated performance using precision, recall, F1-score, and inference time
+
+### Phase 5: System Integration & Real-Time Processing
+- Built a Flask-based web application for audio upload and analysis
+- Integrated transcription, diarization, and emotion detection into a real-time workflow
+- Designed an interactive UI displaying speaker-wise emotions and confidence scores
+
+### Phase 6: Testing & Validation
+- Tested the system on real-world multi-speaker audio samples
+- Assessed scalability, robustness, and response time under diverse conditions
+- Conducted usability testing to refine emotion visualization and output clarity
+
+### Phase 7: Deployment & Documentation
+- Deployed the system in a local GPU/cloud-supported environment for demonstration
+- Prepared technical documentation, API usage guides, and user instructions
+- Finalized the project with a live working prototype and presentation of outcomes
+
+This phased approach ensured the delivery of a scalable, real-time, and explainable SER framework for emotionally intelligent AI applications.
