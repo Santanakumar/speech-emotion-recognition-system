@@ -32,3 +32,11 @@ The project focuses on developing a scalable and real-time SER framework capable
 - Providing speaker-specific emotion timelines and visual insights via a Flask-based interface.
 
 The system is designed for real-world deployment in areas such as healthcare support, virtual education, intelligent tutoring systems, and AI-driven customer engagement platforms. By combining speech processing, transformer-based emotion inference, and explainable feedback, the project aims to advance emotionally intelligent and human-centric AI communication.
+
+## RESEARCH GAPS ADDRESSED
+Despite significant progress in Speech Emotion Recognition (SER) and sentiment analysis, several limitations still reduce the real-world effectiveness of current systems. The project aims to bridge these gaps through an advanced, real-time, and explainable framework.
+
+### Key Gaps: Identified & Proposed Solutions
+
+- **Limited Context Awareness:** Most SER models analyze utterances in isolation, failing to capture emotional flow across conversational turns.
+  *Solution:* Transformer-based models (RoBERTa, DistilBERT) are integrated with diarized speech to preserve dialogue continuity.
