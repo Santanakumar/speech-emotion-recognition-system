@@ -86,7 +86,7 @@ The primary objective of this project is to design and implement a **real-time S
 
 By achieving these objectives, the project delivers a scalable, context-aware, and emotionally intelligent AI framework that enhances human-computer interaction.
 
-## Project Plan & Development Phases
+## PROJECT PLAN & DEVELOPMENT PHASES
 The project was executed in a structured multi-phase workflow to ensure scalability, accuracy, and real-time performance.
 
 ### Phase 1: Research & Requirement Analysis
@@ -129,3 +129,8 @@ The project was executed in a structured multi-phase workflow to ensure scalabil
 - Finalized the project with a live working prototype and presentation of outcomes
 
 This phased approach ensured the delivery of a scalable, real-time, and explainable SER framework for emotionally intelligent AI applications.
+
+## REQUIREMENTS
+- Python 3.9+
+- GPU recommended for faster inference
+- HuggingFace + PyAnnote access tokens
