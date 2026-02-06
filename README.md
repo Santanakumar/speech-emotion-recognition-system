@@ -60,3 +60,26 @@ Despite significant progress in Speech Emotion Recognition (SER) and sentiment a
   *Solution:* Explainable AI (XAI) modules visualize confidence scores, emotion trends, and speaker timelines for interpretability.
 
 By addressing these gaps, the project delivers a scalable, context-aware, multilingual, and explainable SER framework suitable for real-world human-centric AI applications.
+
+## PROBLEM STATEMENT
+Speech is one of the richest forms of human communication, conveying not only words but also emotional cues through tone, pitch, and prosody. However, most traditional sentiment analysis systems rely maninly on text input and fail to capture these acoustic emotional dimensions, leading to incomplete or inaccurate emotion interpretation.
+
+Existing Speech Emotion Recognition (SER) models face several challenges, including:
+
+- Limited contextual understanding across conversational turns
+- Difficulty handling multi-speaker conversations
+- High latency in real-time applications
+- Poor adaptability to multilingual speech and accent variations
+- Lack of transparency due to black-box deep learning predictions
+
+To address these limitations, this project proposes a **real-time, explainable Speech Emotion Recognition framework** that combines speech transcription, speaker diarization, transformer-based emotion classification, and emotion visualization to enhance emotionally intelligent AI interactions.
+
+## OBJECTIVES
+The primary objective of this project is to design and implement a **real-time Speech Emotion Recognition (SER) system** integrated with sentiment-aware analysis to improve the emotional intelligence of AI-driven conversational applications.
+
+### Key Objective Include:
+- **Real-Time Emotion Detection:** Develop an end-to-end pipeline capable of detecting emotions from spoken conversations with low latency.
+- **Multilingual Speech Transcription:** Use **OpenAI Whisper** to generate accurate speech-to-text transcriptions even undder noisy conditions and diverse accents.
+- **Speaker-Level Emotion Association:** Apply **PyAnnote Speaker Diarization** to separate multiple spekers and map emotions to individual voices.
+- **Context-Aware Emotion Classification:** Leverage transformer-based NLP models (**RoBERTa, DistilBERT**) to classify emotions such as happiness, sadness, anger, fear and neutrality.
+- **Explainable AI Integration (XAI):** Provide interpretable outputs through confidence scores, emotion timelines, and real-time visual feedback for improved trust.
