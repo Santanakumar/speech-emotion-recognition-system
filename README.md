@@ -12,3 +12,23 @@ Through optimized preprocessing, parallelized execution, and GPU acceleration, t
 
 ## Introduction
 ### Background
+
+Speech Emotion Recognition (SER), combined with real-time sentiment analysis, plays a key role in building emotionally intelligent AI systems for domains such as healthcare, customer support, education, and human-computer interaction. Traditional sentiment analysis methods are mostly text-based and often fail to capture critical cues present in speech, such as tone, pitch, and prosody.
+
+To overcome this limitation, the project introduces a real-time framework that integrates both speech and text-based emotion analysis. The system leverages "OpenAI Whisper" for accurate multilingual speech transcription, "PyAnnote" for speaker diarization in multi-speaker conversations, and transformer-based NLP models such as "RoBERTa" and "DistilBERT" for sentiment-aware emotion classification. Unlike conventional SER approaches that depend on handcrafted audio features (MFCCs, spectrograms), this solution adopts an end-to-end deep learning pipeline for improved adaptability and contextual understanding.
+
+### Motivation
+
+The motivation behind this project stems from the growing need for AI systems that can understand and respond to human in real time. Text-only analysis often leads to incomplet emotional interpretation, reducing the effectiveness of conversational agents, mental health tools, and virtual assistants.
+
+By enabling emotion-aware speech processing, the system can support sensitive applications such as early distress detection in mental health monitoring, empathetic customer service automation, and more natural human-like interactions in AI assistants. Additionally, Explainable AI (XAI) components provide confidence scores and emotion visualizations, improving transparency and user trust.
+
+### Scope of the Project
+The project focuses on developing a scalable and real-time SER framework capable of:
+
+- Detecting emotions from spoken conversations.
+- Handling multi-speaker audio through speaker diarization.
+- Performing multilingual transcription and sentiment-aware emotion classification.
+- Providing speaker-specific emotion timelines and visual insights via a Flask-based interface.
+
+The system is designed for real-world deployment in areas such as healthcare support, virtual education, intelligent tutoring systems, and AI-driven customer engagement platforms. By combining speech processing, transformer-based emotion inference, and explainable feedback, the project aims to advance emotionally intelligent and human-centric AI communication.
