@@ -85,3 +85,14 @@ The primary objective of this project is to design and implement a **real-time S
 - **Explainable AI Integration (XAI):** Provide interpretable outputs through confidence scores, emotion timelines, and real-time visual feedback for improved trust.
 
 By achieving these objectives, the project delivers a scalable, context-aware, and emotionally intelligent AI framework that enhances human-computer interaction.
+
+## Project Plan & Development Phases
+The project was executed in a structured multi-phase workflow to ensure scalability, accuracy, and real-time performance.
+
+### Phase 1: Research & Requirement Analysis
+- Reviewed existing work in Speech Emotion Recognition (SER), speaker diarization, and sentiment analysis.
+- Identified key challenges such as real-time latency, lack of interpretability, and speaker-level emotion attribution.
+- Defined functional and non-functional requirements.
+- Finalized tools: Python, Whisper, PyAnnote, Transformers and Flask.
+
+### Phase 2: Data Collection & Preprocessing
