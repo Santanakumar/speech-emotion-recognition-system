@@ -137,7 +137,7 @@ This phased approach ensured the delivery of a scalable, real-time, and explaina
 
 ## DESIGN APPROACH AND DETAILS
 ### System Architecture
-![System Architecture](documents/images/System Architecture.png)
+![System Architecture](documents/images)
 This project follows an end-to-end real-time pipeline:
 - Audio upload via Flask Interface
 - Preprocessing & Standardization
