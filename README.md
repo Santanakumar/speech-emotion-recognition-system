@@ -204,4 +204,21 @@ At Level 1, the system is divided into internal modules:
 5. **Insights Generator:** Produces the final emotion and speaker-wise report for the user.
 
 This flow highlights the complete pipeline from audio input to interpretable emotional output.
+
 ![DFD Levvel 1](documents/images/Data_Flow_Diagram_Level1.png)
+
+#### Class Diagram
+The Class Diagram represents the object-oriented structure of the Speech Emotion Recognition system.
+It follows a modular design where each class is responsible for a specific task in the pipeline.
+
+- **AudioInput** handles user-uploaded audio files.
+- **Preprocessing** prepares the audio through normalization and standardization.
+- **FeatureExtractor** extracts relevant speech features for analysis.
+- **SpeakerDiarization** identifies and segments different speakers.
+- **EmotionRecognition** detects emotions from speech or transcript patterns.
+- **ConversationAnalyzer** combines speaker turns with emotional states.
+- **ReportGenerator** produces the final structured emotion and conversation report.
+
+Supporting classed such as **SpeakerSegments**, **EmotionLabels**, and **AnalyzedData** ensure clean data handling and scalability.
+
+![Class Diagram](documents/images/Class_Diagram.png)
