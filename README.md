@@ -192,7 +192,7 @@ At Level 0, the system is viewed as a single process interacting with the user:
 - The system analyzes the speech to detect emotions and speaker information.
 - The output is returned as structured emotional insights.
 
-![DFD Level 0](documents/images/
+![DFD Level 0](documents/images/Data_Flow_Diagram_Level0.png)
 
 ##### Level 1:
 At Level 1, the system is divided into internal modules:
