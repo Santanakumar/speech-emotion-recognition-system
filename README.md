@@ -2,7 +2,6 @@
 Speech Emotion Recognition system with Speaker Diarization and Emotion Analysis for Enhanced multi-speaker conversations.
 
 ## EXECUTIVE SUMMARY
----
 The project "Speech Emotion Recognition with Speaker Diarization and Emotion Analysis for Enhanced Conversation" presents a real-time AI framework designed to detect and interpret emotions in spoken conversations. Traditional sentiment analysis approaches rely mainly on text input and often fail to capture important emotional cues embedded in speech, such as tone, pitch, and prosody.
 
 To address these limitations, the proposed system integrates "Speech Emotion Recognition (SER)" with "Speaker Diarization" and "Explainable AI (XAI)" to deliver an emotionally aware and context-sensitive solution. The framework leverages advanced machine learning models, including "OpenAI Whisper" for robust multilingual speech-to-text transcription, "PyAnnote" for accurate speaker segmentation, and transformer-based NLP models such as "RoBERTa" and "DistilBERT" for sentiment-aware emotion classification.
@@ -10,8 +9,6 @@ To address these limitations, the proposed system integrates "Speech Emotion Rec
 A key strength of the system is its ability to process "multi-speaker audio", associate detected emotions with specific speakers, and provide real-time visual feedback through a "Flask-based web interface". Emotions such as happiness, sadness, anger, and neutrality are identified along with confidence scores, while XAI components enhance transparency by presenting emotional trends and speaker timelines.
 
 Through optimized preprocessing, parallelized execution, and GPU acceleration, the system demonstrates strong real-time performance, scalability, and adaptability across languages and domains. The project serves as both a functional prototype and a research contribution, offering a comprehensive approach toward building emotionally intelligent AI systems for applications such as mental health monitoring, virtual education, and AI- driven customer support.
-
----
 
 ## INTRODUCTION
 ### Background
@@ -35,8 +32,6 @@ The project focuses on developing a scalable and real-time SER framework capable
 - Providing speaker-specific emotion timelines and visual insights via a Flask-based interface.
 
 The system is designed for real-world deployment in areas such as healthcare support, virtual education, intelligent tutoring systems, and AI-driven customer engagement platforms. By combining speech processing, transformer-based emotion inference, and explainable feedback, the project aims to advance emotionally intelligent and human-centric AI communication.
-
----
 
 ## RESEARCH GAPS ADDRESSED
 Despite significant progress in Speech Emotion Recognition (SER) and sentiment analysis, several limitations still reduce the real-world effectiveness of current systems. The project aims to bridge these gaps through an advanced, real-time, and explainable framework.
@@ -162,3 +157,29 @@ This project follows an end-to-end real-time pipeline:
 - OpenAI Whisper is used to transcribe speech into text.
 - Provides accurate transcription across accents, noise, and conversational speech.
 - Output: Clean text transcript.
+
+**3. Speaker & Emotion Processing**
+- PyAnnote performs speaker diarization to identify who spoke when.
+- RoBERTa and DistilBERT analyze transcribed segments for emotion detection.
+- Enables speaker-wise emotion mapping in multi-speaker conversations.
+
+**4. Emotion Classification**
+- Detects key emotions such as:
+  - Happiness
+  - Sadness
+  - Anger
+  - Fear
+  - Neutrality
+
+- Outputs emotion labels with confidence scores.
+- Final predictions are generated at the speaker level.
+
+**5. Explainability & Visualization (XAI)**
+- A Flask-based interface displays results in real time, including:
+  - Speaker-wise emotion breakdown
+  - Emotion probability scores
+  - Annotated transcripts
+  - Time-aligned emotion trends
+ 
+ ### Design
+ 
