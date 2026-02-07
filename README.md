@@ -10,6 +10,8 @@ A key strength of the system is its ability to process "multi-speaker audio", as
 
 Through optimized preprocessing, parallelized execution, and GPU acceleration, the system demonstrates strong real-time performance, scalability, and adaptability across languages and domains. The project serves as both a functional prototype and a research contribution, offering a comprehensive approach toward building emotionally intelligent AI systems for applications such as mental health monitoring, virtual education, and AI- driven customer support.
 
+---
+
 ## INTRODUCTION
 ### Background
 
@@ -32,6 +34,8 @@ The project focuses on developing a scalable and real-time SER framework capable
 - Providing speaker-specific emotion timelines and visual insights via a Flask-based interface.
 
 The system is designed for real-world deployment in areas such as healthcare support, virtual education, intelligent tutoring systems, and AI-driven customer engagement platforms. By combining speech processing, transformer-based emotion inference, and explainable feedback, the project aims to advance emotionally intelligent and human-centric AI communication.
+
+---
 
 ## RESEARCH GAPS ADDRESSED
 Despite significant progress in Speech Emotion Recognition (SER) and sentiment analysis, several limitations still reduce the real-world effectiveness of current systems. The project aims to bridge these gaps through an advanced, real-time, and explainable framework.
@@ -152,8 +156,6 @@ This project follows an end-to-end real-time pipeline:
 - Users upload speech samples via a Flask web interface.
 - Audio is standardized to 16kHz WAV format for consistent processing.
 - Inputs are assumed pre-cleaned (no extra noise removal).
-  
----
 
 **2. Speech-to-Text Transcription (Whisper)**
 - OpenAI Whisper is used to transcribe speech into text.
