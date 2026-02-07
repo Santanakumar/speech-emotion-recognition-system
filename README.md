@@ -149,22 +149,22 @@ This project follows an end-to-end real-time pipeline:
 
 ### Detailed Components Breakdown
 
-**1. Audio Input & Preprocessing**
+#### 1. Audio Input & Preprocessing
 - Users upload speech samples via a Flask web interface.
 - Audio is standardized to 16kHz WAV format for consistent processing.
 - Inputs are assumed pre-cleaned (no extra noise removal).
 
-**2. Speech-to-Text Transcription (Whisper)**
+#### 2. Speech-to-Text Transcription (Whisper)
 - OpenAI Whisper is used to transcribe speech into text.
 - Provides accurate transcription across accents, noise, and conversational speech.
 - Output: Clean text transcript.
 
-**3. Speaker & Emotion Processing**
+#### 3. Speaker & Emotion Processing
 - PyAnnote performs speaker diarization to identify who spoke when.
 - RoBERTa and DistilBERT analyze transcribed segments for emotion detection.
 - Enables speaker-wise emotion mapping in multi-speaker conversations.
 
-**4. Emotion Classification**
+#### 4. Emotion Classification
 - Detects key emotions such as:
   - Happiness
   - Sadness
@@ -175,12 +175,36 @@ This project follows an end-to-end real-time pipeline:
 - Outputs emotion labels with confidence scores.
 - Final predictions are generated at the speaker level.
 
-**5. Explainability & Visualization (XAI)**
+#### 5. Explainability & Visualization (XAI)
 - A Flask-based interface displays results in real time, including:
   - Speaker-wise emotion breakdown
   - Emotion probability scores
   - Annotated transcripts
   - Time-aligned emotion trends
  
- ### Design
- 
+### Design
+#### Data Flow Diagram (DFD)
+The Data Flow Diagram (DFD) represents how audio input is processed through the Speech Emotion Recognition system.
+
+##### Level 0:
+At Level 0, the system is viewed as a single process interacting with the user:
+- The user provides raw conversation audio.
+- The system analyzes the speech to detect emotions and speaker information.
+- The output is returned as structured emotional insights.
+
+![DFD Level 0](documents/images/
+
+##### Level 1:
+At Level 1, the system is divided into internal modules:
+
+1. **Audio Capture & Preprocessing:** Receives and standardizes the uploaded audio.
+
+2. **Speaker Diarization Module:** Identifies speaker segments and separates voices.
+
+3. **Emotion Recognition Module:** Detects emotional states from speech and transcribed text.
+
+4. **Conversation Analyzer:** Maps emotions to specific speakers across the timeline.
+
+5. **Insights Generator:** Produces the final emotion and speaker-wise report for the user.
+
+This flow highlights the complete pipeline from audio input to interpretable emotional output.
