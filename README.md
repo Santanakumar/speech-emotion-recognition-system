@@ -198,13 +198,9 @@ At Level 0, the system is viewed as a single process interacting with the user:
 At Level 1, the system is divided into internal modules:
 
 1. **Audio Capture & Preprocessing:** Receives and standardizes the uploaded audio.
-
 2. **Speaker Diarization Module:** Identifies speaker segments and separates voices.
-
 3. **Emotion Recognition Module:** Detects emotional states from speech and transcribed text.
-
 4. **Conversation Analyzer:** Maps emotions to specific speakers across the timeline.
-
 5. **Insights Generator:** Produces the final emotion and speaker-wise report for the user.
 
 This flow highlights the complete pipeline from audio input to interpretable emotional output.
