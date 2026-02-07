@@ -204,3 +204,4 @@ At Level 1, the system is divided into internal modules:
 5. **Insights Generator:** Produces the final emotion and speaker-wise report for the user.
 
 This flow highlights the complete pipeline from audio input to interpretable emotional output.
+![DFD Levvel 1](documents/images/Data_Flow_Diagram_Level1.png)
