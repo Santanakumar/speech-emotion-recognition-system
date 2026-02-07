@@ -134,3 +134,14 @@ This phased approach ensured the delivery of a scalable, real-time, and explaina
 - Python 3.9+
 - GPU recommended for faster inference
 - HuggingFace + PyAnnote access tokens
+
+## DESIGN APPROACH AND DETAILS
+### System Architecture
+
+This project follows an end-to-end real-time pipeline:
+- Audio upload via Flask Interface
+- Preprocessing & Standardization
+- Speaker Diarization using PyAnnote
+- Speech-to-Text Transcription using Whisper
+- Emotion Classification using RoBERTa/DistilBERT
+- Explainable AI Visualization (Emotion Trends + Confidence Scores)
