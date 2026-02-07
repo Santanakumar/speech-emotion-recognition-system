@@ -145,3 +145,17 @@ This project follows an end-to-end real-time pipeline:
 - Speech-to-Text Transcription using Whisper
 - Emotion Classification using RoBERTa/DistilBERT
 - Explainable AI Visualization (Emotion Trends + Confidence Scores)
+
+### Detailed Components Breakdown
+
+**1. Audio Input & Preprocessing**
+- Users upload speech samples via a Flask web interface.
+- Audio is standardized to 16kHz WAV format for consistent processing.
+- Inputs are assumed pre-cleaned (no extra noise removal).
+  
+---
+
+**2. Speech-to-Text Transcription (Whisper)**
+- OpenAI Whisper is used to transcribe speech into text.
+- Provides accurate transcription across accents, noise, and conversational speech.
+- Output: Clean text transcript.
