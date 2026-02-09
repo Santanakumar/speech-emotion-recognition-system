@@ -222,3 +222,82 @@ It follows a modular design where each class is responsible for a specific task 
 Supporting classed such as **SpeakerSegments**, **EmotionLabels**, and **AnalyzedData** ensure clean data handling and scalability.
 
 ![Class Diagram](documents/images/Class_Diagram.png)
+
+## METHODOLOGY AND TESTING
+### Dataset
+The project doesn't depend on a fixed pre-collected dataset.
+Instead, it performs **real-time inference** on user-uploaded speech recordings.
+
+Users can upload audio in formats such as:
+- `.mp3`
+- `.wav`
+- `.m4a`
+- `.mp4`
+
+The system processes the input live using pre-trained models:
+- **Whisper (OpenAI)** for speech-to-text transcription
+- **PyAnnote** for speaker diarization
+- **Transformer-based emotion classifier** (RoBERTa / DistilBERT) for emotion detection
+
+Since the system works directly on user-provided audio, it is:
+- Domain-independent
+- Personalized to user context
+- Privacy-aware (no large dataset storage required)
+
+This makes the approach scalable and suitable for real-world applications such as telehealth, customer support, and education.
+
+### Module Description
+#### 1. Model Loading Module
+Initializes all required deep learning models:
+- Whisper for transcription
+- PyAnnote for diarization
+- Transformer models for emotion classification
+
+Supports dynamic CPU/GPU selection for efficient inference.
+
+#### 2. Audio Preprocessing Module
+Standardizes uploaded audio into a uniform format:
+- 16kHz sample rate
+- Mono-channel WAV conversion
+
+Ensures compatibility and improves transcription reliability.
+
+#### 3. Speaker Diarization Module
+Identifies and segments speech based on speaker identity.
+
+- Detects speaker turns with timestamps
+- Enables speaker-wise emotion tracking
+
+Essential for multi-speaker conversations.
+
+#### 4. Emotion Analysis Module
+Classifies emotions from diarized transcripts using transformers.
+
+Detects emotions such as:
+- Happiness
+- Sadness
+- Anger
+- Fear
+- Neutrality
+
+Produces both segment-level and overall emotion summaries.
+
+#### 5. Web Interface Module
+Provides an interactive Flask-based interface for users.
+
+- Audio upload support
+- Real-time emotion results
+- JSON output + optional visualizations
+
+Makes the system accessible without coding knowledge.
+
+#### 6. Core Processing Pipeline Module
+Orchestrates the complete end-to-end workflow:
+
+1. Audio preprocessing
+2. Transcription (Whisper)
+3. Speaker diarization (PyAnnote)
+4. Emotion classification (Transformers)
+5. Structured report generation
+
+This module forms the backbone of the real-time SER system.
