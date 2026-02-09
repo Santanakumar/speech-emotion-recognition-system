@@ -305,8 +305,8 @@ This module forms the backbone of the real-time SER system.
 ## RESULT AND DISCUSSION
 The proposed Speech Emotion Recognition system was successfully deployed using a Flask-based web application and tested on real-time user-uploaded audio inputs. The system accurately performed speech transcription, speaker diarization, and emotion classification, producing speaker-wise emotional insights.
 
-### Result
-#### Final Outputs
+### RESULT
+#### Final Output
 **Output 1:** 
 [!Output 1](documents/results/Output_1.png)
 
