@@ -308,13 +308,13 @@ The proposed Speech Emotion Recognition system was successfully deployed using a
 ### RESULT
 #### Final Output
 **Output 1:** 
-[!Output 1](documents/results/Output_1.png)
+![Output 1](documents/results/Output_1.png)
 
 **Output 2:**
-[!Output 2](documents/results/Output_2.png)
+![Output 2](documents/results/Output_2.png)
 
 **Output 3:**
-[!Output 3](documents/results/Output_3.png)
+![Output 3](documents/results/Output_3.png)
 
 #### Summary of Performance
 **Comparison with Traditional SER Systems:**
@@ -327,16 +327,16 @@ The proposed Speech Emotion Recognition system was successfully deployed using a
 | Explainability | Low | Emotion timeline + confidence output |
 
 **Emotion Classification and Accuracy Comparison:**
-[!Emotion Classification and Accuracy Comparison](documents/results/emotion_classification_and_accuracy_comparison.png)
+![Emotion Classification and Accuracy Comparison](documents/results/emotion_classification_and_accuracy_comparison.png)
 
 **Diarization Error Rate (DER):**
-[!Diarization Error Rate](documents/results/diarization_error_rate.png)
+![Diarization Error Rate](documents/results/diarization_error_rate.png)
 
 **Latency Comparison for Real-Time Inference:**
-[!Latency Comparison for Real-Time Inference](documents/results/latency_comparison_for_realtime_inference.png)
+![Latency Comparison for Real-Time Inference](documents/results/latency_comparison_for_realtime_inference.png)
 
 **Emotion Detection Confidence Levels:**
-[!Emotion Detection Confidence Levels](documents/results/emotion_detection_confidence_levels.png)
+![Emotion Detection Confidence Levels](documents/results/emotion_detection_confidence_levels.png)
 
 **Multi-Speaker Emotion Attribution Accuracy:**
-[!Multi-Speaker Emotion Attribution Accuracy](documents/results/multispeaker_emotion_attribution_accuracy.png)
+![Multi-Speaker Emotion Attribution Accuracy](documents/results/multispeaker_emotion_attribution_accuracy.png)
