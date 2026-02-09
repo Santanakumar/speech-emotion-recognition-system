@@ -340,3 +340,16 @@ The proposed Speech Emotion Recognition system was successfully deployed using a
 
 **Multi-Speaker Emotion Attribution Accuracy:**
 ![Multi-Speaker Emotion Attribution Accuracy](documents/results/multispeaker_emotion_attribution_accuracy.png)
+
+### DISCUSSION
+The integrated Speech Emotion Recognition (SER) system validated the effectiveness of combining speaker diarization with transformer-based emotion classification for real-time applications. Using OpenAI Whisper for transcription and PyAnnote for diarization, the system achieved accurate segmentation and emotion attribution even in noisy, multi-speaker conversations.
+
+A major improvement over traditional SER pipeline is the ability to generate **speaker-specific emotional summaries**, rather than producing a single undifferentiated output. The RoBERTa/DistilBERT-based emotion classifier successfully detected key emotions such as happiness, sadness, anger, and neutrality.
+
+Explainable AI (XAI) support further enhanced interpretability through confidence scores and emotion transition timelines, making results more transparent for end users. The pipeline also demonstrated low latency with GPU acceleration, enabling emotion inference within seconds for short audio clips.
+
+Some limitations were observed in handling ambiguous or sarcastic speech, and subtle emotions like fear or surprise were occasionally misclassified due to overlapping emotional cues.
+
+Overall, the project delivers a scalable, real-time, and emotionally intelligent framework suitable for domains such as telehealth, education, and customer service analytics.
+
+## CONCLUSION
