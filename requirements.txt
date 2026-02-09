@@ -1,0 +1,8 @@
+flask 
+openai-whisper
+pyannote.audio
+pydub
+torch
+transformers
+werkzeug
+pyngrok
