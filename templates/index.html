@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Emotion Recognition</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0B0C10;
+            color: #C5C6C7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background: #1F2833;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 700px;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #66FCF1;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #C5C6C7;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 20px auto;
+            padding: 12px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #1F2833;
+            background: #66FCF1;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #66FCF1;
+            color: #1F2833;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45A29E;
+        }
+
+        #loading {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #66FCF1;
+        }
+
+        .spinner {
+            border: 5px solid #C5C6C7;
+            border-top: 5px solid #66FCF1;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            background: #0B0C10;
+            border: 2px solid #66FCF1;
+            border-radius: 10px;
+            text-align: left;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .segment {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #45A29E;
+        }
+
+        .segment:last-child {
+            border-bottom: none;
+        }
+
+        .overall-emotion {
+            font-size: 1.5em;
+            color: #66FCF1;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <script>
+        async function uploadFile(event) {
+            event.preventDefault();
+
+            const fileInput = document.querySelector("#fileInput");
+            const formData = new FormData();
+            formData.append("file", fileInput.files[0]);
+
+            document.getElementById("loading").style.display = "block";
+            document.getElementById("result").innerHTML = "";
+
+            try {
+                const response = await fetch("/upload", {
+                    method: "POST",
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error(await response.text());
+                }
+
+                const result = await response.json();
+                document.getElementById("loading").style.display = "none";
+
+                const resultDiv = document.querySelector("#result");
+
+                resultDiv.innerHTML = `
+                    <div class="overall-emotion">
+                        Overall Emotion: <strong>${result.overall_emotion}</strong>
+                    </div>
+                `;
+
+                result.segments.forEach(segment => {
+                    const segmentDiv = document.createElement("div");
+                    segmentDiv.className = "segment";
+
+                    segmentDiv.innerHTML = `
+                        <p><strong>${segment.speaker}</strong>
+                        (${segment.start.toFixed(1)}s - ${segment.end.toFixed(1)}s)</p>
+
+                        <p>Emotion: <strong>${segment.emotion}</strong></p>
+
+                        <p>${segment.text}</p>
+                    `;
+
+                    resultDiv.appendChild(segmentDiv);
+                });
+
+            } catch (error) {
+                document.getElementById("loading").style.display = "none";
+
+                document.querySelector("#result").innerHTML = `
+                    <div style="color: #ff6b6b;">
+                        Error: ${error.message}
+                    </div>
+                `;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Speech Emotion Recognition</h1>
+
+        <p>Upload an audio file, and we'll analyze the emotions behind the words.</p>
+
+        <form id="uploadForm" onsubmit="uploadFile(event)">
+            <input type="file" id="fileInput" name="file"
+                   accept=".mp3, .m4a, .mp4, .wav" required>
+
+            <button type="submit">Upload and Analyze</button>
+        </form>
+
+        <div id="loading">
+            <div class="spinner"></div>
+            Analyzing audio, please wait...
+        </div>
+
+        <div id="result"></div>
+    </div>
+</body>
+</html>
