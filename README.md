@@ -353,3 +353,15 @@ Some limitations were observed in handling ambiguous or sarcastic speech, and su
 Overall, the project delivers a scalable, real-time, and emotionally intelligent framework suitable for domains such as telehealth, education, and customer service analytics.
 
 ## CONCLUSION
+The project successfully demonstrates a real-time Speech Emotion Recognition (SER) system that integrates transcription, speaker diarization, and emotion classification into a unified framework.
+
+Key highlights include:
+
+- Accurate speech-to-text conversion using **OpenAI Whisper**
+- Multi-speaker segmentation with **PyAnnote diarization**
+- Emotion detection using transformer models (**RoBERTa/DistilBERT**)
+- Speaker-wise emotional summaries with confidence-based insights
+- Explainable AI support through emotion trends and interpretable outputs
+- Scalable deployment via a Flask-based web interface with GPU acceleration
+
+Overall, the system provides a practical and transparent solution for building emotionally intelligent AI applications in domains such as healthcare, education, and customer support.
